@@ -14,29 +14,22 @@
 
     <main class="page">
       <header class="app-frame top-line">
-        <a href="index.html" class="back-link" aria-label="案内に戻る">←</a>
+        <a href="index.html" class="back-link" aria-label="案内に戻る">↩</a>
         <div class="brand">NazoGram</div>
         <div class="subtitle">ゲーム</div>
       </header>
 
-      <section class="content game">
-        <div class="puzzle-frame">
-          <div class="puzzle-title">第一章</div>
-          <div class="puzzle-body">
-            ここに謎が入ります。スマホの向きや動きが鍵になるかも…。
-          </div>
+      <!-- Stage Select Overlay -->
+      <section id="stage-overlay" class="stage-overlay" aria-label="ステージ選択">
+        <div class="stage-head">
+          <div class="stage-title">STAGE SELECT</div>
+          <div class="stage-hint">横にスクロールしてステージを選択</div>
         </div>
+        <div id="stage-scroller" class="stage-scroller" role="list" aria-label="ステージ一覧"></div>
+      </section>
 
-        <section class="sensor-mini">
-          <div class="mini-grid">
-            <div><span>方位</span><strong id="g-heading">–</strong></div>
-            <div><span>α</span><strong id="g-alpha">–</strong></div>
-            <div><span>β</span><strong id="g-beta">–</strong></div>
-            <div><span>γ</span><strong id="g-gamma">–</strong></div>
-          </div>
-          <button id="g-enable" class="button hollow small" aria-label="センサーへのアクセスを許可">センサー有効化</button>
-          <div id="g-note" class="note small"></div>
-        </section>
+      <section class="content game">
+        <div id="stage-root" class="stage-root" aria-live="polite"></div>
       </section>
 
       <footer class="app-frame bottom-line safe-area">
@@ -45,6 +38,7 @@
     </main>
 
     <script src="assets/sensors.js"></script>
+    <script src="assets/stage1.js"></script>
     <script src="assets/game.js"></script>
   </body>
   </html>
