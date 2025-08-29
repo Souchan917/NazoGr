@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b0d0f" />
+    <title>NazoGram | 案内</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <div class="mobile-warning" role="note">
+      スマートフォン専用コンテンツです。スマホでご利用ください。
+    </div>
+
+    <main class="page">
+      <header class="app-frame top-line">
+        <div class="brand">NazoGram</div>
+        <div class="subtitle">案内</div>
+      </header>
+
+      <section class="content">
+        <p>
+          これから始まる謎解きゲームの案内ページです。<br />
+          スマートフォンのコンパスや角度などのセンサー情報を利用します。
+        </p>
+        <p class="hint">※ センサー利用には、ブラウザの許可が必要です。</p>
+
+        <div class="divider"></div>
+
+        <section class="sensor-card">
+          <h2 class="card-title">センサーの状態</h2>
+          <div id="secure-warning" class="note hidden">
+            センサー取得にはHTTPSが必要な場合があります。<br />
+            うまく動作しない場合は、HTTPSでアクセスしてください。
+          </div>
+
+          <div class="sensor-grid">
+            <div class="row"><span>権限:</span><strong id="perm-status">未確認</strong></div>
+            <div class="row"><span>方位:</span><strong id="heading">–</strong></div>
+            <div class="row"><span>α:</span><strong id="alpha">–</strong></div>
+            <div class="row"><span>β:</span><strong id="beta">–</strong></div>
+            <div class="row"><span>γ:</span><strong id="gamma">–</strong></div>
+            <div class="row"><span>加速度(X/Y/Z):</span><strong id="acc">–</strong></div>
+          </div>
+
+          <div class="actions">
+            <button id="btn-enable" class="button hollow" aria-label="センサーへのアクセスを許可">センサーを有効化</button>
+          </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="notes">
+          <ul>
+            <li>iPhoneでは「センサーの許可」を求められる場合があります。</li>
+            <li>磁気の影響を受けやすいため、金属の近くでは誤差が出ます。</li>
+            <li>Chrome/Safariの最新版での利用を推奨します。</li>
+          </ul>
+        </section>
+      </section>
+
+      <footer class="app-frame bottom-line safe-area">
+        <a id="start-link" href="game.html" class="button primary wide">START</a>
+      </footer>
+    </main>
+
+    <script src="assets/sensors.js"></script>
+    <script src="assets/main.js"></script>
+  </body>
+  </html>
